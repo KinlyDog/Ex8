@@ -24,7 +24,9 @@ public class Level1 {
 
             if (i == track[x][0]) {
                 car += light(car, track[x][1], track[x][2]);
-                x = x < n - 1 ? x + 1 : x;
+                x = x < n - 1 ?
+                        x + 1 :
+                        x;
             }
         }
 
