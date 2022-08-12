@@ -1,9 +1,12 @@
 public class Level1 {
     public static int light(int time, int red, int green) {
         int sum = red + green;
+        int count = time;
         int color = 0;
 
-        int count = time > sum ? time % sum : time;
+        if (time > sum) {
+            count = time % sum;
+        }
 
         if (count < red) {
             color = red - count;
@@ -27,5 +30,4 @@ public class Level1 {
 
         return car;
     }
-
 }
