@@ -3,10 +3,7 @@ public class Level1 {
         int sum = red + green;
         int color = 0;
 
-        int count = time;
-        if (time > sum) {
-            count = time - time / sum * sum;
-        }
+        int count = time > sum ? time % sum : time;
 
         if (count < red) {
             color = red - count;
@@ -24,15 +21,11 @@ public class Level1 {
 
             if (i == track[x][0]) {
                 car += light(car, track[x][1], track[x][2]);
-                x++;
+                x = x < n - 1 ? x + 1 : x;
             }
-
-            if (x == n) {
-                x--;
-            }
-
         }
 
         return car;
     }
+
 }
