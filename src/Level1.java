@@ -2,17 +2,17 @@ public class Level1 {
     public static int light(int time, int red, int green) {
         int sum = red + green;
         int count = time;
-        int color = 0;
+        int TrafficLightColor = 0;
 
         if (time > sum) {
             count = time % sum;
         }
 
         if (count < red) {
-            color = red - count;
+            TrafficLightColor = red - count;
         }
 
-        return color;
+        return TrafficLightColor;
     }
 
     public static int Unmanned(int l, int n, int[][] track) {
