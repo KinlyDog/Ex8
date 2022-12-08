@@ -1,5 +1,5 @@
 public class Level1 {
-    public static int light(int time, int red, int green) {
+    public static int getStopTime(int time, int red, int green) {
         int sum = red + green;
         int count = time;
         int trafficLightColor = 0;
@@ -23,7 +23,7 @@ public class Level1 {
             car++;
 
             if (i == track[trafficLight][0]) {
-                car += light(car, track[trafficLight][1], track[trafficLight][2]);
+                car += getStopTime(car, track[trafficLight][1], track[trafficLight][2]);
                 trafficLight = trafficLight < n - 1 ? trafficLight + 1 : trafficLight;
             }
         }
