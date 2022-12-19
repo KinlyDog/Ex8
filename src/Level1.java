@@ -1,9 +1,9 @@
 public class Level1 {
     public static int getStopTime(int time, int red, int green) {
-        int sum = red + green;
         int count = time;
         int trafficLightColor = 0;
 
+        int sum = red + green;
         if (time > sum) {
             count = time % sum;
         }
