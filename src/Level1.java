@@ -1,6 +1,3 @@
-import java.util.Random;
-import java.util.Scanner;
-
 public class Level1 {
     public static int getStopTime(int time, int red, int green) {
         int count = time;
